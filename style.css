@@ -3,10 +3,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Patrick Hand SC", cursive;
+  font-family: "Ubuntu", sans-serif;
 }
 :root {
-  --clr-1: #252422;
+  --clr-1: white;
+  --clr-2: #dc0061;
+  --clr-3: #2f275e;
+  --clr-4: blue;
+  --clr-5: black;
+  --text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.31);
 }
 body {
   width: 100vw;
@@ -23,14 +28,98 @@ body {
   left: -140000rem;
 }
 header {
-  background: url("./images/image-1.jpg");
+  background-image: url("images/image-1.jpg");
   background-repeat: no-repeat;
   /* position: fixed; */
+  /* border-bottom-left-radius: 50% 40%;
+  border-bottom-right-radius: 50% 40%; */
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   height: 100vh;
   display: flex;
+  justify-content: start;
+  align-items: center;
+  /* text-align: center; */
+  text-shadow: var(--text-shadow);
+  color: var(--clr-3);
+}
+/* styling container section */
+.container {
+  /* padding-bottom: 2rem; */
+  padding-left: 5rem;
+  height: 20rem;
+}
+.container h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: var(--clr-2);
+  letter-spacing: 0.4rem;
+}
+/* styling heading 2 */
+.container h2 {
+  text-transform: capitalize;
+  letter-spacing: 0.2rem;
+  line-height: 2;
+}
+.container p,
+.container a {
+  line-height: 2;
+  font-size: 1.5rem;
+  /* margin-top: 0.5rem; */
+  letter-spacing: 0.1rem;
+}
+.container p a {
+  text-decoration: none;
+  color: var(--clr-4);
+  font-weight: 500;
+}
+.container p a:hover {
+  text-decoration: underline;
+  transition: 0.5s ease-in;
+}
+/* styling github start logo */
+
+.container p {
+  margin-bottom: 2rem;
+}
+div.container .link-github {
+  border: 2px solid var(--clr-1);
+  background-color: var(--clr-3);
+  color: var(--clr-1);
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  display: flex;
   justify-content: center;
   align-items: center;
+  width: 20rem;
+}
+div.container .link-github:hover {
+  background-color: var(--clr-1);
+  transition: 0.4s ease-in-out;
+  color: var(--clr-3);
+  border: 2px solid var(--clr-3);
+}
+div.container .link-github:hover span svg {
+  fill: var(--clr-3);
+  transition: 0.4s ease-in-out;
+}
+
+.container a span svg {
+  /* font-size: 1rem; */
+  margin: 0 0.7rem;
+  height: 1rem;
+  width: 1rem;
+  fill: var(--clr-1);
+}
+
+/* styline nav */
+nav {
+  background: rgb(0, 0, 0);
+}
+nav ul {
+  display: flex;
 }
