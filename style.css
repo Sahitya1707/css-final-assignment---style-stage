@@ -118,8 +118,55 @@ div.container .link-github:hover span svg {
 
 /* styline nav */
 nav {
-  background: rgb(0, 0, 0);
+  /* background-image: linear-gradient(
+    to right,
+    #9aabb5,
+    #a3aab7,
+    #acaab5,
+    #b2aab2,
+    #b6abaf
+  ); */
+  background-color: var(--clr-1);
+  height: 4rem;
+  box-shadow: -6px -8px 45px rgba(0, 0, 0, 0.229);
+  z-index: 1200;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 nav ul {
   display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 0 10px;
+  /* padding: 2rem 0; */
+  /* background-color: ; */
+}
+/* styling navigation anchor tag */
+nav ul li a {
+  text-transform: uppercase;
+  margin: 0 3rem 0 0;
+  color: var(--clr-3);
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  position: relative;
+}
+/* beow component has been added so that you get good underline effect while hovering on nav */
+nav ul li a::after {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  content: "";
+  height: 2px;
+  width: 00%;
+  background-color: var(--clr-2);
+}
+nav ul li a:hover::after {
+  width: 100%;
+  transition: 0.2s ease-in;
 }
