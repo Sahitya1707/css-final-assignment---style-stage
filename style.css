@@ -90,7 +90,7 @@ a {
 header .container p {
   margin-bottom: 2rem;
 }
-div.container .link-github,
+header div.container .link-github,
 .container .link-guidelines {
   border: 2px solid var(--clr-1);
   background-color: var(--clr-3);
@@ -106,7 +106,7 @@ div.container .link-github,
   width: 20rem;
 }
 
-div.container .link-github:hover,
+header div.container .link-github:hover,
 .container .link-guidelines:hover {
   background-color: var(--clr-1);
   transition: 0.4s ease-in-out;
@@ -358,7 +358,7 @@ h2 {
 }
 /* styling profile section */
 .profile {
-  background-image: url("./images/image-3.jpg");
+  background: #eacc76;
   height: 25rem;
   width: 100%;
   background-size: cover;
@@ -414,7 +414,7 @@ h2 {
 #styles .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
 }
 #styles ul {
   list-style: none;
@@ -422,7 +422,7 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 1rem 2rem;
-  margin: 0 0 2rem 0;
+  margin: 0 0 0.5rem 0;
 }
 #styles ul li {
   border: 1px solid var(--clr-3);
@@ -448,13 +448,14 @@ h2 {
   color: var(--clr-1);
 
   padding: 1rem 1.5rem;
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  font-weight: bold;
   margin-top: 1rem;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20rem;
+  width: 12rem;
 }
 .link-allstyles:hover {
   background-color: var(--clr-1);
@@ -462,4 +463,62 @@ h2 {
   transition: 0.4s ease-in-out;
   color: var(--clr-3);
   border: 2px solid var(--clr-3);
+}
+/* Styling page footer
+ */
+.page-footer {
+  /* border-top: 1px solid var(--clr-3); */
+  background-color: var(--clr-1);
+  margin-top: 2rem;
+  padding: 2rem 7rem;
+  box-shadow: -5px -2px 11px #a6a6a68c;
+}
+.page-footer .container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 1rem;
+  color: var(--clr-3);
+}
+/* making line height normal for footer */
+.page-footer .container p {
+  line-height: normal;
+}
+.page-footer .container p:nth-of-type(1) {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.page-footer .container ul {
+  display: flex;
+  list-style: none;
+  gap: 0 1rem;
+}
+.link-github svg {
+  fill: var(--clr-3);
+  height: 1rem;
+  width: 1rem;
+}
+.page-footer .container ul li a {
+  opacity: 0.8;
+  color: var(--clr-3);
+  font-weight: bold;
+}
+.page-footer .container ul a:hover {
+  transition: 0.2s ease-in-out;
+  text-decoration: underline;
+
+  opacity: 1;
+}
+
+.page-footer .container p:nth-of-type(2),
+.page-footer .container p:nth-of-type(3) {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* moving the  grid item to left so that there can be space in grid footer*/
+.page-footer .container p:nth-of-type(3),
+.page-footer .container ul {
+  justify-self: end;
 }
